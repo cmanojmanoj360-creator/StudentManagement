@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template,request
 
 app = Flask(__name__)
 
@@ -10,7 +10,6 @@ def home():
 def search_student():
     name = request.args.get("name", "")
     return "Searching for student: " + name
-
 
 if __name__ == "__main__":
     app.run(debug=True)
